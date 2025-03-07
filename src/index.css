@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom scrollbar styles for the root */
+html {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f4f4f4; /* Thumb and track color */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+    background: #f4f4f4; /* Track color */
+    border-radius: 8px; /* Optional for rounded track edges */
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 8px; /* Rounded corners for the thumb */
+    border: 3px solid #f4f4f4; /* Adds space around the thumb for a floating effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    display: none;
+    background-color: #555; /* Darker thumb on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+    display: none;
+    background-color: #333; /* Even darker thumb when active */
+}

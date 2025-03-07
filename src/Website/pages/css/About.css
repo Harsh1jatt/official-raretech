@@ -1,0 +1,71 @@
+/* About Section */
+.about {
+    height: auto;
+    width: 100%;
+    color: #515151;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Top Section */
+.top {
+    height: 50vh;
+    width: 100%;
+    background: url(../../../assets/h2.jpg) no-repeat;
+    /* filter: brightness(2); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    font-size: 3vw; /* Adjust font size for responsiveness */
+    color: white;
+    margin-bottom: 3vw;
+}
+
+@media (max-width: 768px) {
+    .top {
+        font-size: 7vw; /* Slightly larger font size on smaller screens */
+    }
+}
+
+/* About Content */
+.about-content {
+    margin: 20px;
+    font-weight: light;
+    font-size: 1rem; /* Use rem for better scaling */
+}
+
+/* Paragraphs inside About Content */
+.about-content p {
+    font-size: 1rem; /* Adjust font size using rem for scalability */
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens like tablets and below */
+    .about-content {
+        margin: 10px;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem; /* Slightly smaller text on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile screens */
+    .top {
+        font-size: 8vw; /* Larger font size on mobile */
+    }
+
+    .about-content {
+        margin: 5px;
+    }
+
+    .about-content p {
+        font-size: 0.8rem; /* Adjust text size for readability on mobile */
+    }
+}

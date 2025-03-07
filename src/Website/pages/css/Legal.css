@@ -1,0 +1,52 @@
+/* Container for certificates */
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the certificates */
+}
+
+/* Card styles */
+.certificates .card {
+    padding: 2rem; /* Use rem for better scaling */
+    height: 100vh;
+    min-height: 500px;
+    width: 100%;
+    max-width: 350px; /* Set a max width to prevent oversized cards */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.certificates .card .img {
+    height: 80%; /* Fixed height for image */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Responsiveness for different screen sizes */
+@media (min-width: 768px) {
+    .certificates .card {
+        width: 100%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .certificates .card {
+        width: 100%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* Stack cards on top of each other on small screens */
+    }
+
+    .card .img {
+        height: 90%; /* Smaller image height for small screens */
+    }
+}
+
+/* Certificates card adjustments */
+.certificates .card {
+    padding-bottom: 0;
+}

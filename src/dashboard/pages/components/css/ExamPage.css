@@ -1,0 +1,266 @@
+/* General Page Styling */
+.exam-page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.create-btn {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.create-btn:hover {
+  background-color: #0056b3;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+select {
+  padding: 5px;
+  background: #fff;
+  border: none;
+  height: min-content;
+  font-size: 12px;
+}
+
+/* Table Styling */
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.exam-table th,
+.exam-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.exam-table th {
+  background-color: #007BFF;
+  color: #fff;
+  font-weight: 600;
+}
+
+.exam-table tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Action Buttons & Dropdown */
+.action-buttons {
+  position: relative;
+  text-align: center;
+}
+
+/* Three Dots Icon */
+.ri-more-2-fill {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.ri-more-2-fill:hover {
+  color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+  padding: 5px 0;
+  list-style: none;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+/* Delete Option Styling */
+.delete-option {
+  color: red;
+}
+
+.delete-option:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: darkred;
+}
+
+/* No Exams Text */
+.no-exams {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* 🔹 Responsive Design 🔹 */
+
+/* For Tablets & Smaller Screens */
+@media (max-width: 992px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .actions {
+    gap: 5px;
+    justify-content: space-between;
+  }
+
+  .exam-table th,
+  .exam-table td {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 8px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .create-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .exam-table th,
+  .exam-table td {
+    padding: 5px;
+    font-size: 9px;
+  }
+
+  .ri-more-2-fill {
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    min-width: 90px;
+  }
+
+  .table-container {
+    width: 100%;
+  }
+
+  .exam-table {
+    min-width: 100%;
+  }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 5px;
+  }
+
+  .header h1 {
+    font-size: 14px;
+  }
+
+  .create-btn {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .exam-table th,
+  .exam-table td {
+    padding: 4px;
+    font-size: 8px;
+  }
+
+  .ri-more-2-fill {
+    font-size: 12px;
+  }
+
+  .dropdown-menu {
+    min-width: 80px;
+  }
+}

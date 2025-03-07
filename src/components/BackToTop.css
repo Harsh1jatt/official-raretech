@@ -1,0 +1,16 @@
+.backtotop{
+    padding: 10px;
+    background: rgba(0, 0, 255, 0.495);
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+    border: none;
+}
+
+.backtotop:hover{
+    background: rgb(0, 0, 173);
+}
