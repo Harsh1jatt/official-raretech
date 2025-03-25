@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WebRoutes from "./Website/WebRoutes";
-import DRoutes from "./dashboard/DRoutes";
-import SRoutes from "./students/SRoutes";
-import ORoutes from "./owner/ORoutes";
-
+import WebHeader from "./pages/components/WebHeader";
+import WebFooter from "./pages/components/WebFooter";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Certificate from "./pages/Certificate";
+import Courses from "./pages/Courses";
+import Legal from "./pages/Legal";
+import Contact from "./pages/Contact";
+import BackToTop from "./components/BackToTop";
 
 const App = () => {
+  
   return (
     <Router>
+      <WebHeader />
       <Routes>
-        {/* Website routes */}
-        <Route path="/*" element={<WebRoutes />} />
-        {/* Dashboard routes */}
-        <Route path="/dashboard/*" element={<DRoutes />} />
-        {/* Students routes */}
-        <Route path="/exam/*" element={<SRoutes />} />
-        {/* Owner routes */}
-        <Route path="/owner/*" element={<ORoutes/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/certificate" element={<Certificate />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/legal" element={<Legal />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
+      <BackToTop />
+      <WebFooter />
     </Router>
   );
 };

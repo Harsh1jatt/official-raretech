@@ -1,0 +1,122 @@
+h2{
+    text-align: center;
+}
+/* From Uiverse.io by krlozCJ */ 
+.btn {
+  border: none;
+  outline: none;
+  background-color: #2306ff;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px 0px #2e21e4;
+}
+
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #1100ff;
+}
+.input {
+    /* max-width: 250px; */
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    min-width: 250px;
+  }
+  
+  .input:focus {
+    border-bottom: 2px solid blue;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  .input:hover {
+    outline: 1px solid lightgrey;
+  }
+/* Container Styling */
+.search {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+/* From Uiverse.io by cssbuttons-io */ 
+.srchbtn {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.srchbtn:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.srchbtn:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.certificate-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-preview {
+  /* min-width: 80%;
+  max-width: fit-content; */
+  width: 490px; 
+  height: 625px;
+  max-height: fit-content;
+  border: none; /* Removes default border */
+  overflow: hidden; /* Prevents scrolling */
+
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.download-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

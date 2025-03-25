@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="shortcut icon" href="/rare.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Raretech</title>
   </head>
   <body>
     <div id="root"></div>
+    
+    <script>
+      // Send a request when the page loads
+      fetch("https://iems.onrender.com/")
+        .then(response => console.log("Request sent successfully"))
+        .catch(error => console.error("Error sending request:", error));
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
