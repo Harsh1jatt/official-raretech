@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    display: inline-block;
+  }
+  
+  .navbar a:hover {
+    color: #ff9800;
+  }
+  
+  .policy-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .policy-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .policy-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
