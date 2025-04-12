@@ -10,6 +10,7 @@ const WebFooter = () => {
       </p>
 
       <div className="footer-menu">
+        <h3>For Institute Use Only</h3>
         <ul>
           <li><a href="">Exam</a></li>
           <li><a href="https://admin.raretech.co.in/">Dashboard</a></li>
@@ -17,7 +18,6 @@ const WebFooter = () => {
           <li><Link to="/certificate">Certificate Verification</Link></li>
         </ul>
         <br />
-        <h3>For Institute Use Only</h3>
         <ul>
           <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           <li><Link to="/refund">Refund</Link></li>
