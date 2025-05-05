@@ -22,7 +22,16 @@ const Certificate = () => {
     try {
       const response = await axios.get(`https://iems.onrender.com/institute/certificate/${rollNumber}`);
       console.log(response.data);
-      setFiles([response.data.certificate, response.data.marksheet]);
+
+      // Extract certificate and marksheet URL whether plain string or object
+      const getUrl = (file) => typeof file === 'string' ? file : file?.fileUrl;
+
+      const normalizedFiles = [
+        { name: 'Certificate', fileUrl: getUrl(response.data.certificate) },
+        { name: 'Marksheet', fileUrl: getUrl(response.data.marksheet) },
+      ];
+
+      setFiles(normalizedFiles);
       setCurrentIndex(0);
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to fetch files');
@@ -32,6 +41,7 @@ const Certificate = () => {
       setFetching(false);
     }
   };
+
 
   const nextFile = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % files.length);
@@ -63,15 +73,20 @@ const Certificate = () => {
       {fetching && <p className="loading-message">Loading certificate...</p>}
       {files.length > 0 && !fetching && (
         <div className="certificate-container">
-          <h3>{currentIndex === 0 ? 'Certificate' : 'Marksheet'}</h3>
-          <img src={files[currentIndex].fileUrl || files[currentIndex]} alt="Document" className="file-preview" />
+          <h3>{files[currentIndex].name}</h3>
+          <img
+            src={files[currentIndex].fileUrl}
+            alt={files[currentIndex].name}
+            className="file-preview"
+          />
           <div className="navigation-buttons">
             <button className="download-button" onClick={prevFile} disabled={files.length < 2}>Previous</button>
-            <a href={files[currentIndex].fileUrl || files[currentIndex].fileUrl} download className="download-button">Download</a>
+            <a href={files[currentIndex].fileUrl} download className="download-button">Download</a>
             <button className="download-button" onClick={nextFile} disabled={files.length < 2}>Next</button>
           </div>
         </div>
       )}
+
     </div>
   );
 };
