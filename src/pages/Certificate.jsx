@@ -64,10 +64,10 @@ const Certificate = () => {
       {files.length > 0 && !fetching && (
         <div className="certificate-container">
           <h3>{currentIndex === 0 ? 'Certificate' : 'Marksheet'}</h3>
-          <img src={files[currentIndex]} alt="Document" className="file-preview" />
+          <img src={files[currentIndex].fileUrl} alt="Document" className="file-preview" />
           <div className="navigation-buttons">
             <button className="download-button" onClick={prevFile} disabled={files.length < 2}>Previous</button>
-            <a href={files[currentIndex]} download className="download-button">Download</a>
+            <a href={files[currentIndex].fileUrl} download className="download-button">Download</a>
             <button className="download-button" onClick={nextFile} disabled={files.length < 2}>Next</button>
           </div>
         </div>
