@@ -29,51 +29,69 @@ const Home = () => {
         );
     };
 
-    // Automatically change the image every 2 seconds
     useEffect(() => {
-        const interval = setInterval(nextImage, 2000); // 2000ms = 2 seconds
-        return () => clearInterval(interval); // Cleanup on component unmount
+        const interval = setInterval(nextImage, 3000);
+        return () => clearInterval(interval);
     }, []);
 
     return (
-        <div>
-            <div className="slider">
+        <div className="home-container">
+            {/* HERO SECTION */}
+            <section className="slider">
                 <img
                     src={images[currentImageIndex]}
                     alt="slider"
                     className="slider-image"
-                    id='slider-image'
                 />
+                <div className="overlay">
+                    <h1>Raretech Institute of Information Technology</h1>
+                    <p>Empowering Students with Professional Computer Education</p>
+                    <button className="cta-btn">Get Started</button>
+                </div>
                 <div className="prev-btn sliderbtn" onClick={prevImage}>
                     &#10094;
                 </div>
                 <div className="next-btn sliderbtn" onClick={nextImage}>
                     &#10095;
                 </div>
-            </div>
-            <div className="part1">
-                <h1>Welcome To Raretech Institute Of Information Technology</h1>
-                <p>An ISO 9001 Certified & Govt. Registered Institute. We are providing quality concept based computer education at reasonable rates for the last 10+ years, Institute is run by the Professionals, for the Professionals. Raretech Institute Of Information Technology, Ludhiana focuses on concept based training instead of cramming using latest art of technology. We are teaching PHP, Web Designing, Website Design & Development, Live Projects, Dreamweaver, Coral Draw, Photoshop, Tally, HTML & CSS etc., We offer 6 months Industrial Training with Live Project, 6 weeks (Six Weeks) - 45 Days training for B-Tech students and all types of Training for BCA & MCA Final Year students for Projects preparation and submission to their respective university.
+            </section>
+
+            {/* ABOUT SECTION */}
+            <section className="about">
+                <h2>About Us</h2>
+                <p>
+                    An ISO 9001 Certified & Govt. Registered Institute with 10+ years of
+                    excellence in concept-based computer education. We focus on practical,
+                    industry-ready training in Web Development, Graphic Design, Tally
+                    Accounts, MS Office, Video Editing, and more.
                 </p>
-            </div>
-            <div className="part2">
-                <div className="part2-content">
-                    <Card image={webdesign} title={'Web Design & Development'} para={`We provide industrial training for Web Design & Development in Java, PHP & MySQL and provide live training on industry projects.`}/>
-                    <Card image={graphics} title={'Graphic Desining'} para={`We teach Graphic Designing with the help of latest designing tool like Photoshop , Coral Draw, 2D & 3D animations, video mixing & sound animations etc.`}/>
-                    <Card image={account} title={'Accounts'} para={`We provide training to the student on Tally Accounting Software to cater to the needs of Financial Accounting and Bookkeeping.`}/>
-                    <Card image={dca} title={'DCA'} para={`Explore fundamental computer skills, MS Office, and basics of accounting to enhance your career.`}/>
-                    <Card image={adca} title={'ADCA'} para={`Learn advanced concepts in computer applications, MS Office, and computerized accounting systems.`}/>
-                    <Card image={office} title={'MS OFFICE'} para={`Build expertise in MS Word, Excel, PowerPoint, and Access for professional applications.`}/>
+            </section>
+
+            {/* COURSES SECTION */}
+            <section className="courses">
+                <h2>Our Popular Courses</h2>
+                <div className="course-grid">
+                    <Card image={webdesign} title={'Web Design & Development'} para={`Hands-on training with Java, PHP, MySQL & industry projects.`}/>
+                    <Card image={graphics} title={'Graphic Designing'} para={`Master Photoshop, CorelDRAW, 2D/3D Animation & Video Editing.`}/>
+                    <Card image={account} title={'Accounts'} para={`Learn Tally Accounting Software, Bookkeeping & Finance basics.`}/>
+                    <Card image={dca} title={'DCA'} para={`Learn MS Office, Internet, Email & basic Accounting.`}/>
+                    <Card image={adca} title={'ADCA'} para={`Advanced MS Office & computerized accounting systems.`}/>
+                    <Card image={office} title={'MS OFFICE'} para={`Excel, Word, PowerPoint & Access for professional use.`}/>
                 </div>
-            </div>
-            <div className="part3 part1">
-                <h1>We Just Don’t Educate, We Also Provide Placements.</h1>
-                <p>Raretech Institute has a renowned name in job placements and has been in this field for long years. All merit students are given an opportunity for best placements in industries, schools and colleges.</p>
-                <p>We have been able to guide our students and provide placement in manufacturing industries for posts such as computer operator, designers, accounting executive and for other official posts.</p>
-                <p>Students passing out of Raretech are also given proper advice and consulting to appear and apply for the various post that appears in Newspaper and  Periodicals</p>
-                <p>We understand placement is vital for candidates to apply his her knowledge in the real world. Hence for the last 10 years, we have been able to place a lot of students to industries in Ludhiana and also in our own academy.</p>
-            </div>
-            <img src={p5} alt="A Choice That makes a Big Difference in your Career" />
+            </section>
+
+            {/* PLACEMENT SECTION */}
+            <section className="placement">
+                <h2>Placements & Careers</h2>
+                <p>
+                    We not only educate but also help our students build their careers.
+                    With strong placement support, our students have secured jobs in
+                    industries, schools, and companies as Developers, Designers,
+                    Accountants, and IT Executives.
+                </p>
+                <img src={p5} alt="Placements" className="placement-img" />
+            </section>
+
         </div>
     );
 };
