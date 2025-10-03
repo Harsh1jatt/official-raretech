@@ -1,158 +1,151 @@
-/* Slider styles */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Slider */
 .slider {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.cta-btn {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #e64a19;
+}
+.sliderbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* About */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f7f7f7;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-#slider-image {
-    width: 100%;
-    height: auto;
-    max-height: 80vh; 
-    /* aspect-ratio: 16/9;  */
+/* Courses */
+.courses {
+  padding: 60px 20px;
+  text-align: center;
+}
+.courses h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.slider .sliderbtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 20px;
-    padding: 8px 15px;
-    cursor: pointer;
-    z-index: 100;
-    border-radius: 50%;
+/* Placement */
+.placement {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f0f4f7;
+}
+.placement h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.placement p {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  color: #444;
+  line-height: 1.6;
+}
+.placement-img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.prev-btn {
-    left: 10px;
+/* Footer */
+.footer {
+  background: #222;
+  color: #ccc;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer p {
+  margin: 0;
 }
 
-.next-btn {
-    right: 10px;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Part 1 styles */
-.part1 {
-    padding: 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.part1 h1 {
-    font-size: 2em;
-    color: #515151;
-    margin-bottom: 20px;
-}
-
-.part1 p {
-    font-size: 1em;
-    color: #515151;
-    line-height: 1.5;
-    margin-top: 20px;
-    text-align: left;
-}
-
-/* Part 2 styles */
-.part2 {
-    background: url(../images/flower-2.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding: 20px 10px;
-}
-
-.part2-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Part 3 styles */
-.part3 {
-    padding: 20px;
-    background-color: #eaeaea;
-    text-align: center;
-}
-
-.part3 h1 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.part3 p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
-    #slider-image {
-        max-height: 16vh; /* Adjust height for tablets */
-        /* aspect-ratio: 16/10; */
-    }
-
-    .part1 h1, .part3 h1 {
-        font-size: 1.5em;
-    }
-
-    .part1 p, .part3 p {
-        font-size: 0.9em;
-    }
-
-    .slider button {
-        font-size: 18px;
-        padding: 8px;
-    }
-
-    .part2-content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .overlay h1 { font-size: 1.8rem; }
+  .overlay p { font-size: 1rem; }
 }
-
 @media (max-width: 480px) {
-    #slider-image {
-        max-height: 16vh; /* Adjust height for mobile */
-        /* aspect-ratio: 6/12; Keeps image proportionate */
-    }
-
-    .card-title {
-        font-size: 1.2rem;
-    }
-
-    .card-description {
-        font-size: 0.9rem;
-    }
-
-    .part1 h1, .part3 h1 {
-        font-size: 1.2em;
-    }
-
-    .part1 p, .part3 p {
-        font-size: 0.8em;
-    }
-
-    .slider button {
-        font-size: 16px;
-        padding: 6px;
-    }
-
-    .part2-content {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
+  .overlay h1 { font-size: 1.5rem; }
+  .overlay p { font-size: 0.9rem; }
+  .cta-btn { padding: 10px 20px; font-size: 0.9rem; }
 }
