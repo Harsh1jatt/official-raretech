@@ -4,14 +4,15 @@ import { Instagram, MessageCircle } from "lucide-react";
 
 const WebFooter = () => {
   return (
-    <footer className="bg-[#0a0f1c] text-gray-400 px-6 md:px-20 py-14 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-10 md:gap-20">
-        {/* Brand */}
-        <div className="md:col-span-2">
-          <h2 className="text-white text-2xl font-semibold mb-3">
+    <footer className="bg-[#0a0f1c] text-gray-400 border-t border-gray-800 py-16 px-8 md:px-24">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 md:gap-24">
+        
+        {/* Brand Section */}
+        <div className="md:col-span-2 space-y-5">
+          <h2 className="text-white text-3xl font-semibold tracking-tight">
             Raretech Institute
           </h2>
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed text-gray-400 max-w-sm">
             Raretech Institute of Information Technology • Ludhiana, Punjab  
             <br />
             Tel:{" "}
@@ -19,17 +20,17 @@ const WebFooter = () => {
               +91 62800 09096
             </a>
           </p>
-          <p className="text-xs text-gray-500 mt-6">
+          <p className="text-xs text-gray-500 pt-6 border-t border-gray-800">
             © {new Date().getFullYear()} Raretech Institute. All rights reserved.
           </p>
         </div>
 
-        {/* For Institute Use Only */}
-        <div>
-          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider mb-3">
+        {/* Institute Section */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">
             Institute
           </h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li>
               <a
                 href="https://exam.raretech.co.in/"
@@ -65,12 +66,12 @@ const WebFooter = () => {
           </ul>
         </div>
 
-        {/* Policies */}
-        <div>
-          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider mb-3">
+        {/* Policies Section */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">
             Policies
           </h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li>
               <Link to="/privacy-policy" className="hover:text-blue-400">
                 Privacy Policy
@@ -94,18 +95,18 @@ const WebFooter = () => {
           </ul>
         </div>
 
-        {/* Connect */}
-        <div>
-          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider mb-3">
+        {/* Connect Section */}
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold text-gray-200 uppercase tracking-wider">
             Connect
           </h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li>
               <a
                 href="https://softweb.raretech.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-pink-400 transition"
+                className="flex items-center gap-3 hover:text-pink-400 transition"
               >
                 <Instagram size={18} />
                 Instagram
@@ -116,7 +117,7 @@ const WebFooter = () => {
                 href="https://wa.me/916280009096"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-400 transition"
+                className="flex items-center gap-3 hover:text-green-400 transition"
               >
                 <MessageCircle size={18} />
                 WhatsApp
