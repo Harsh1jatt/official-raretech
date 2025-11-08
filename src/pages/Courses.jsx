@@ -82,11 +82,11 @@ const Courses = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
         {courses.map((c, i) => (
           <article
             key={i}
-            className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2"
+            className="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between w-full max-w-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center"
           >
             {/* Image */}
             <div className="relative h-56 overflow-hidden">
@@ -103,28 +103,28 @@ const Courses = () => {
                 to="/contact"
                 className="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-400"
               >
-                <button className="bg-white/95 text-slate-900 py-2 px-4 rounded-full text-sm font-medium shadow-md hover:scale-105 transition">
+                <button className="bg-white/90 backdrop-blur-md text-slate-900 py-2 px-5 rounded-full text-sm font-medium shadow-md hover:scale-105 transition">
                   View Details
                 </button>
               </Link>
             </div>
 
             {/* Content */}
-            <div className="p-6 flex flex-col flex-1 justify-between">
-              <div className="flex flex-col gap-3">
-                <h2 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+            <div className="p-6 flex flex-col flex-1 justify-between items-center">
+              <div className="flex flex-col gap-3 items-center">
+                <h2 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors text-center">
                   {c.title}
                 </h2>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed text-center">
                   {c.para}
                 </p>
               </div>
 
               {/* Footer Row */}
-              <div className="flex items-center justify-between gap-4 mt-5">
+              <div className="flex items-center justify-between w-full mt-6">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition mx-auto"
                 >
                   Learn more
                   <svg
@@ -143,13 +143,10 @@ const Courses = () => {
                     ></path>
                   </svg>
                 </Link>
+              </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-slate-500">Duration</span>
-                  <span className="text-sm font-semibold text-slate-800 bg-slate-100 px-3 py-1 rounded-full">
-                    1–3 months
-                  </span>
-                </div>
+              <div className="mt-4 bg-slate-100 text-slate-800 px-4 py-1 rounded-full text-sm font-semibold">
+                Duration: 1–3 months
               </div>
             </div>
           </article>
@@ -160,7 +157,7 @@ const Courses = () => {
       <div className="max-w-3xl mx-auto mt-16 text-center">
         <Link
           to="/contact"
-          className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-8 rounded-full font-semibold shadow-lg hover:from-blue-700 hover:to-cyan-600 transform hover:-translate-y-1 transition-all duration-300"
+          className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-10 rounded-full font-semibold shadow-lg hover:from-blue-700 hover:to-cyan-600 transform hover:-translate-y-1 transition-all duration-300"
         >
           Enroll Now
         </Link>
