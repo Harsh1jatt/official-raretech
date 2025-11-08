@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+llimport React, { useState, useEffect } from 'react';
 import './css/Home.css';
 import accounts from './images/accounts.png';
 import graphic from './images/graphic.png';
@@ -14,7 +14,7 @@ import adca from './images/pda.png';
 import office from './images/msoffice.png';
 import Card from './components/Card';
 import p5 from './images/p5.png';
-
+import { Link } from 'react-router-dom'; // ← Add this at the top
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [accounts, graphic, hardware, learnVideoEditing, SEO, web];
@@ -112,7 +112,9 @@ const Home = () => {
       <section className="cta-banner">
         <h2>Ready to start your IT journey?</h2>
         <p>Enroll now and transform your future with Raretech.</p>
-        <button className="cta-btn primary">Enroll Today</button>
+          <Link to="/contact">
+    <button className="cta-btn primary">Enroll Today</button>
+  </Link>
       </section>
 
     </div>
