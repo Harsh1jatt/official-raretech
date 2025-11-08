@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import webdesign from "./images/webdesign.avif";
 import account from "./images/tally-accounts.jpg";
 import graphics from "./images/graphic.jpg";
@@ -70,7 +71,7 @@ const Courses = () => {
   return (
     <section className="bg-gradient-to-b from-white via-slate-50 to-white py-20 px-6 md:px-16 font-sans">
       {/* Header */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
+      <div className="max-w-4xl mx-auto text-center mb-14">
         <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
           Our Professional Courses
         </h1>
@@ -85,10 +86,9 @@ const Courses = () => {
         {courses.map((c, i) => (
           <article
             key={i}
-            className="group relative bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-2xl transform transition duration-400 ease-out hover:-translate-y-2"
-            aria-labelledby={`course-${i}`}
+            className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2"
           >
-            {/* Image + overlay */}
+            {/* Image */}
             <div className="relative h-56 overflow-hidden">
               <img
                 src={c.image}
@@ -97,33 +97,33 @@ const Courses = () => {
                 draggable="false"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-              {/* CTA that appears on hover */}
-              <a
-                href="#"
-                className="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-6 transform transition-all duration-400"
-                aria-label={`View details for ${c.title}`}
+
+              {/* View Details Button */}
+              <Link
+                to="/contact"
+                className="absolute left-1/2 -translate-x-1/2 bottom-4 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-400"
               >
                 <button className="bg-white/95 text-slate-900 py-2 px-4 rounded-full text-sm font-medium shadow-md hover:scale-105 transition">
                   View Details
                 </button>
-              </a>
+              </Link>
             </div>
 
             {/* Content */}
-            <div className="p-6 flex flex-col gap-4">
-              <h2
-                id={`course-${i}`}
-                className="text-lg font-semibold text-slate-900 transition-colors group-hover:text-blue-600"
-              >
-                {c.title}
-              </h2>
-              <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                {c.para}
-              </p>
+            <div className="p-6 flex flex-col flex-1 justify-between">
+              <div className="flex flex-col gap-3">
+                <h2 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  {c.title}
+                </h2>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {c.para}
+                </p>
+              </div>
 
-              <div className="flex items-center justify-between gap-4">
-                <a
-                  href="#"
+              {/* Footer Row */}
+              <div className="flex items-center justify-between gap-4 mt-5">
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition"
                 >
                   Learn more
@@ -142,7 +142,7 @@ const Courses = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     ></path>
                   </svg>
-                </a>
+                </Link>
 
                 <div className="flex items-center gap-3">
                   <span className="text-xs text-slate-500">Duration</span>
@@ -157,13 +157,13 @@ const Courses = () => {
       </div>
 
       {/* CTA Row */}
-      <div className="max-w-3xl mx-auto mt-12 text-center">
-        <a
-          href="#contact"
-          className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:from-blue-700 hover:to-cyan-600 transform hover:-translate-y-1 transition"
+      <div className="max-w-3xl mx-auto mt-16 text-center">
+        <Link
+          to="/contact"
+          className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 px-8 rounded-full font-semibold shadow-lg hover:from-blue-700 hover:to-cyan-600 transform hover:-translate-y-1 transition-all duration-300"
         >
           Enroll Now
-        </a>
+        </Link>
       </div>
     </section>
   );
